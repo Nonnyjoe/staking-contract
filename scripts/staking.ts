@@ -4,9 +4,9 @@ import { time } from "@nomicfoundation/hardhat-network-helpers";
 
 async function main() {
   const [owner, holder1, holder2, holder3] = await ethers.getSigners();
-  //deploy reward token
-  const Token = await ethers.getContractFactory("CVIII");
-  const token = await Token.deploy("web3Bridge", "VIII");
+  //deploy stake token
+  const Token = await ethers.getContractFactory("StakingToken");
+  const token = await Token.deploy("web3Bridge", "VIII", 1000);
   await token.deployed();
 
   const tokenaddress = token.address;
@@ -16,7 +16,7 @@ async function main() {
   ///deploy Staking contract
 
   const Staking = await ethers.getContractFactory("StakERC20");
-  const staking = await Staking.deploy(tokenaddress);
+  const staking = await Staking.deploy();
   await staking.deployed();
   console.log(`Staking contract deployed to ${staking.address}`);
 
