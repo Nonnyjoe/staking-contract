@@ -1,0 +1,30 @@
+{
+  "name": "staking-contract",
+  "version": "1.0.0",
+  "description": "A simple staking smart contract implimented using two tokens (stake and reward tokens) and a staking contract and it returns a 20% apy ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nonnyjoe/staking-contract.git"
+  },
+  "keywords": [
+    "staking",
+    "smart",
+    "contract",
+    "ERC-20",
+    "tokens"
+  ],
+  "author": "IDOGWU CHINONSO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nonnyjoe/staking-contract/issues"
+  },
+  "homepage": "https://github.com/Nonnyjoe/staking-contract#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "hardhat": "^2.12.7"
+  }
+}
