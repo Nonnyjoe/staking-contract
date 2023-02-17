@@ -9,6 +9,10 @@ const config: HardhatUserConfig = {
 
   networks: {
     hardhat: {
+      forking: {
+        enabled: true,
+        url: "https://eth-mainnet.g.alchemy.com/v2/rtlxxes_98Ymred3mrPqUxbq2gx9VcMK",
+      }
     },
     goerli: {
       url: process.env.GOERLI_RPC,
